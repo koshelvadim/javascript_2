@@ -23,44 +23,27 @@
 const form = document.querySelector('.formvalidation');
 const errorText = document.getElementById('false');
 const sucText = document.getElementById('true');
+const listInputs = document.querySelectorAll('input');
 
 const nameForm = document.getElementById('name');
 const telephoneForm = document.getElementById('telephone');
 const emailForm = document.getElementById('email');
 const textForm = document.getElementById('comments');
 
-nameForm.addEventListener('input', function(event) {
-    if (nameForm.validity.valid) {
-        nameForm.classList.remove('red');
-        nameForm.classList.add('green');
-        console.log(nameForm.validity.valueMissing);
-  } else {
-        nameForm.classList.remove('green');
-        nameForm.classList.add('red');
-    }
- });
+listInputs.forEach(function(input){
+    input.addEventListener('input', function(event){
+        if (input.validity.valid) {
+            input.classList.remove('red');
+            input.classList.add('green');
+            console.log(input.validity.valueMissing);
+      } else {
+            input.classList.remove('green');
+            input.classList.add('red');
+        } 
+    });
+});
 
- telephoneForm.addEventListener('input', function(event) {
-    if (telephoneForm.validity.valid) {
-        telephoneForm.classList.remove('red');
-        telephoneForm.classList.add('green');
-  } else {
-        telephoneForm.classList.remove('green');
-        telephoneForm.classList.add('red');
-    }
- });
-
- emailForm.addEventListener('input', function(event) {
-    if (emailForm.validity.valid) {
-        emailForm.classList.remove('red');
-        emailForm.classList.add('green');
-  } else {
-        emailForm.classList.remove('green');
-        emailForm.classList.add('red');
-    }
- });
-
- textForm.addEventListener('input', function(event) {
+textForm.addEventListener('input', function(event) {
     if (textForm.validity.valid) {
         textForm.classList.remove('red');
         textForm.classList.add('green');
