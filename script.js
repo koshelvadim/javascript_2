@@ -35,7 +35,6 @@ listInputs.forEach(function(input){
         if (input.validity.valid) {
             input.classList.remove('red');
             input.classList.add('green');
-            console.log(input.validity.valueMissing);
       } else {
             input.classList.remove('green');
             input.classList.add('red');
