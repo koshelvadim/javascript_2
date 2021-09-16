@@ -3,13 +3,22 @@
     padding: 0px;
 }
 form label{
-    width: 150px;
+    width: 400px;
     display: inline-block;
-    margin: 6px;
+    margin: 10px;
     text-align: justify;
 
 }
 form input[type=submit] {
     width: 100px;
     padding: 5px;
+}
+.red {
+    box-shadow: 0 0 5px 1px red;
+}
+.green {
+    box-shadow: 0 0 5px 1px green;
+}
+.vision_none{
+    display: none;
 }
