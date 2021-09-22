@@ -33,12 +33,6 @@ button:focus{
 .btn-cart, .logo{
     align-self: center;
 }
-/*.products {*/
-/*display: flex;*/
-/*justify-content: space-between;*/
-/*flex-wrap: wrap;*/
-/*padding: 40px 80px;*/
-/*}*/
 .products{
     column-gap: 30px;
     display: grid;
@@ -62,17 +56,12 @@ img {
     max-width: 100%;
     height: auto
 }
-.cart-item img{
-    height: 65px;
-}
-.cart-empty{
-    text-align: center;
-}
 .desc {
     border: 1px solid #c0c0c040;
     padding: 15px
 }
 .cart{
+    display: flex;
     position: relative;
 }
 .cart-block{
@@ -85,10 +74,10 @@ img {
     background-color: white;
     padding: 20px;
     color: black;
-    width: 450px;
+    width: 300px;
 }
 
-.invisible, .none{
+.invisible{
     display: none;
 }
 .cart-block:before{
@@ -104,9 +93,9 @@ img {
 }
 
 .buy-btn, .del-btn{
-    margin-top: 5px;
+    /* margin-top: 5px; */
     background-color: #2f2a2d;
-    /* padding: 5px 15px; */
+    padding: 5px 15px;
     border: 1px solid transparent;
     color: #fafafa;
     border-radius: 5px;
@@ -121,7 +110,6 @@ img {
 .cart-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 .cart-item:not(:last-child){
     margin-bottom: 20px;
@@ -137,9 +125,9 @@ img {
     color: #474747;
     font-size: 0.5em;
 }
-/* .product-price{
+.product-price{
     margin-left: 30px;
-} */
+}
 .product-desc{
     max-width: 150px;
 }
@@ -175,4 +163,42 @@ img {
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #fafafa;
+}
+.error{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    /* -webkit-overflow-scrolling: touch; */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center; /* см. ниже */
+    align-items: center;
+    z-index: 99;
+    padding:30px 0;
+    background:rgba(0, 0, 0, 0.7);
+}
+.error__window {
+    background: #fff;
+    
+    display: flex;
+
+    padding: 10px;
+    max-width: 100%;
+    border-radius: 10px;
+
+}
+.error__window p{
+    color: red;
+    margin: 0;
+    margin-right: 10px;
+
+    display: flex;
+    align-items: center;  
+}
+.active {
+    display: none;
 }
