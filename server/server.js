@@ -1,5 +1,5 @@
-const express = require('express');  // подключение фреймворка Express, для создания полноценного сервера
-const fs = require('fs');  // подключение модуля fs, для работы с файлами Node.js
+const express = require('express');
+const fs = require('fs');
 const cartRouter = require('./cartRouter');
 const app = express();
 
@@ -10,7 +10,7 @@ app.use('/api/cart', cartRouter);
 app.get('/api/products', (req, res) => {
   fs.readFile('./server/db/products.json', 'utf-8', (err, data) => {
     if (err) {
-      res.send(JSON.stringify({result: 0, text: err}));
+      res.send(JSON.stringify({ result: 0, text: err }));
       // res.sendStatus(404, JSON.stringify({result: 0, text: err}));
     } else {
       res.send(data);
@@ -18,7 +18,7 @@ app.get('/api/products', (req, res) => {
   });
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 app.listen(port, () => {
   console.log(`Listening ${port} port`);
 });
