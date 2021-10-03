@@ -1,4 +1,4 @@
-# internet-shop
+# vue-test
 
 ## Project setup
 ```
