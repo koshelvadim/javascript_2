@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-      <h1 class="text-warning">About</h1>
+      <h1>Это страница поста с ID = {{ $route.params.id }}</h1>
   </div>
 </template>
 
@@ -10,6 +10,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
