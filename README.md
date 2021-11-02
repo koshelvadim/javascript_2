@@ -1,3 +1,3 @@
 # javascript_2
-Современный JavaScript
+Продвинутый курс Javascript
 домашка к первому уроку
