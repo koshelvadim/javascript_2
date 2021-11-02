@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     font-family: 'SF Pro Display', sans-serif;
 }
@@ -32,6 +38,7 @@ button{
     display: flex;
     justify-content: space-between;
     padding: 50px 100px;
+    flex-wrap: wrap;
 }
 p {
     margin: 0 0 5px 0;

@@ -13,8 +13,13 @@ const renderProduct = (items) =>
             <button class="by-btn">Добавить</button>
         </div>`;
 
+//Функция для формирования верстки каждого товара
+//Добавить в выводе изображение
+
 const renderProducts = list => {
-  document.querySelector('.products').insertAdjacentHTML('beforeend', list.map(item => renderProduct(item)).join('')); // убираем разделитель массива с помощью метода .join('')
+  const productsList = list.map(item => renderProduct(item)).join(''); // убираем разделитель массива с помощью метода .join('')
+  console.log(list);
+  document.querySelector('.products').insertAdjacentHTML('beforeend', productsList) ; 
 };
 
 renderProducts(products);
